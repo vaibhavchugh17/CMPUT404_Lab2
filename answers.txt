@@ -1,0 +1,24 @@
+Question 1
+You can specify a TCP socket in python using socket.socket() method. The first argument is the address family. socket.AF_INET is the 
+address family for IPv4. The second argument is the socket type. For TCP we can use socket.SOCK_STREAM. 
+
+Question 2
+As we can see from the code in client.py, a client socket needs to connect to a particular IP address of a host and a port over which
+it can send HTTP requests and receive back data.
+A server socket on the other hand needs to bound a host to port where it can listen for connections and accept them. It can be
+connected to any IP address and receive data from them as well as send data back.
+
+Question 3
+We can use sock.setsockopt() and argument SO_REUSEADDR to instruct the OS that allows us to reuse the same port number over and over again. 
+Without it, we'd have to wait for the OS to release the port before we could reuse it.
+
+Question 4
+We know the IP address of the incoming connections when we accept it using sock.accept() method
+
+Question 5
+After the client sends a HTTP request, using recv() it receives back the data send by the server. In our case, this data is the same
+data we send to the server, hence the name echo_server.
+
+Question 6
+https://github.com/vaibhavchugh17/CMPUT404_Lab2
+
